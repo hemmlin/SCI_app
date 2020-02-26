@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" android:background="@color/screenBackground">
+    tools:context=".MainActivity" android:background="@color/taustavari">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -29,7 +29,6 @@
         android:layout_width="229dp"
         android:layout_height="178dp"
         android:layout_marginBottom="8dp"
-        android:onClick="toastMe"
         android:text="Skannaa viivakoodi"
         android:background = "@drawable/roundedbutton"
         app:layout_constraintBottom_toTopOf="@id/kauppalista_siirry"
@@ -42,7 +41,6 @@
         android:layout_width="229dp"
         android:layout_height="178dp"
         android:layout_marginBottom="8dp"
-        android:onClick="toastMe"
         android:text="Luo kauppalista"
         android:background = "@drawable/roundedbutton"
         app:layout_constraintBottom_toTopOf="@id/omaprofiili_siirry"
@@ -55,7 +53,6 @@
         android:layout_width="229dp"
         android:layout_height="178dp"
         android:layout_marginBottom="8dp"
-        android:onClick="toastMe"
         android:text="Oma profiili"
         android:background = "@drawable/roundedbutton"
         app:layout_constraintBottom_toBottomOf="parent"

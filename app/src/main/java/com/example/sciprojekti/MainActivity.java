@@ -1,5 +1,6 @@
 package com.example.sciprojekti;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -23,11 +24,27 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Button qrbtn = (Button)findViewById(R.id.viivakoodi_siirry);
+        Button listabtn = (Button)findViewById(R.id.kauppalista_siirry);
+        Button profiilibtn = (Button)findViewById(R.id.omaprofiili_siirry);
 
         qrbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ViivakoodiActivity.class));
+
+            }
+        });
+        listabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, KauppalistaActivity.class));
+            }
+        });
+
+        profiilibtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ProfiiliActivity.class));
             }
         });
 
