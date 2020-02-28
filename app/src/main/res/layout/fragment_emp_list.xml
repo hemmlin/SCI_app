@@ -11,11 +11,27 @@
         android:padding="10dp" >
     </ListView>
 
-    <TextView
+    <RelativeLayout
         android:id="@+id/empty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="empty_list_text" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true">
 
+        <TextView
+            android:id="@+id/empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/empty_img"
+            android:layout_centerHorizontal="true"
+            android:text="ostoslista on tyhjä" />
+
+        <ImageView
+            android:id="@+id/empty_img"
+            android:src="@drawable/empty_view_bg"
+            android:layout_width="122dp"
+            android:layout_height="242dp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
 </RelativeLayout>
