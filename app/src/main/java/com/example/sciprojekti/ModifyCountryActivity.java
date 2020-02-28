@@ -38,6 +38,7 @@ public class ModifyCountryActivity extends Activity implements OnClickListener {
         String id = intent.getStringExtra("id");
         String name = intent.getStringExtra("title");
         String desc = intent.getStringExtra("desc");
+        String vesi = intent.getStringExtra("vetta");
 
         _id = Long.parseLong(id);
 

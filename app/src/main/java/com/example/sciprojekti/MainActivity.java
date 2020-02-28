@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         listabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, AddCountryActivity.class));
+                startActivity(new Intent(MainActivity.this, CountryListActivity.class));
             }
         });
 

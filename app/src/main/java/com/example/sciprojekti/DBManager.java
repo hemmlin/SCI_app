@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.Random;
+
 public class DBManager {
 
     private DatabaseHelper dbHelper;
@@ -27,16 +29,17 @@ public class DBManager {
     public void close() {
         dbHelper.close();
     }
-
     public void insert(String name, String desc) {
         ContentValues contentValue = new ContentValues();
         contentValue.put(DatabaseHelper.SUBJECT, name);
         contentValue.put(DatabaseHelper.DESC, desc);
+        String vetta= new String(String.valueOf(new Random().nextInt(20)));
+        contentValue.put(DatabaseHelper.VESI, vetta);
         database.insert(DatabaseHelper.TABLE_NAME, null, contentValue);
     }
 
     public Cursor fetch() {
-        String[] columns = new String[]{DatabaseHelper._ID, DatabaseHelper.SUBJECT, DatabaseHelper.DESC};
+        String[] columns = new String[]{DatabaseHelper._ID, DatabaseHelper.SUBJECT, DatabaseHelper.DESC, DatabaseHelper.VESI};
         Cursor cursor = database.query(DatabaseHelper.TABLE_NAME, columns, null, null, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();
