@@ -6,7 +6,7 @@
     android:padding="20dp" >
 
 
-
+<!--
     <EditText
         android:id="@+id/subject_edittext"
         android:layout_width="match_parent"
@@ -16,6 +16,15 @@
 
         <requestFocus />
     </EditText>
+-->
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/tuote_array"
+        android:prompt="@string/tuote_prompt" />
+
 
     <EditText
         android:id="@+id/description_edittext"
@@ -27,18 +36,7 @@
         android:minLines="5" >
     </EditText>
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/tuote_array"
-        android:prompt="@string/tuote_prompt" />
 
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit" />
 
     <Button
         android:id="@+id/add_record"
@@ -46,5 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="lisää tuote" />
+
 
 </LinearLayout>

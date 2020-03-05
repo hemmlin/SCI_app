@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import androidx.cursoradapter.widget.SimpleCursorAdapter;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -109,12 +111,13 @@ public class CountryListActivity extends AppCompatActivity {
     //Kokonaiskulutuksen laskeminen
     public String getTotVesi(){
         int vesi = 0;
-        final String[] kolumni = new String[] {  DatabaseHelper.VESI };
+        String[] kolumni = new String[] {  DatabaseHelper.VESI };
         if(kolumni.length>1){
             int[] sailo=convert(kolumni);
             for (int i : sailo)
                 vesi += i;
         }
+        Log.d("total_count", "getTotVesi: "+kolumni);
         return String.valueOf(vesi);
     }
     //muuttaa jonon Stringeja numeroiks

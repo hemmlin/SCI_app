@@ -15,10 +15,10 @@ import android.widget.Toast;
 public class AddCountryActivity extends Activity implements OnClickListener {
 
     private Button addTodoBtn;
-    private EditText subjectEditText;
+    //private EditText subjectEditText;
     private EditText descEditText;
     private Spinner spinner1;
-    private Button btnSubmit;
+    //private Button btnSubmit;
 
     private DBManager dbManager;
 
@@ -35,7 +35,7 @@ public class AddCountryActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_add_record);
 
 
-        subjectEditText = (EditText) findViewById(R.id.subject_edittext);
+        //subjectEditText = (EditText) findViewById(R.id.subject_edittext);
         descEditText = (EditText) findViewById(R.id.description_edittext);
 
 
@@ -57,21 +57,6 @@ public class AddCountryActivity extends Activity implements OnClickListener {
 
         spinner1 = (Spinner) findViewById(R.id.spinner1);
         //spinner2 = (Spinner) findViewById(R.id.spinner2);
-        btnSubmit = (Button) findViewById(R.id.btnSubmit);
-
-        btnSubmit.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                Toast.makeText(AddCountryActivity.this,
-                        "OnClickListener : " +
-                                "\nSpinner 1 : " + String.valueOf(spinner1.getSelectedItem()) +
-                                "\nSpinner 2 : " ,
-                        Toast.LENGTH_SHORT).show();
-            }
-
-        });
     }
 
     //spinnerihommat loppuu
@@ -80,7 +65,7 @@ public class AddCountryActivity extends Activity implements OnClickListener {
         switch (v.getId()) {
             case R.id.add_record:
                 final String tuote= String.valueOf(spinner1.getSelectedItem());
-                final String name = subjectEditText.getText().toString();
+                //final String name = subjectEditText.getText().toString();
                 final String desc = descEditText.getText().toString();
 
                 dbManager.insert(tuote, desc);
