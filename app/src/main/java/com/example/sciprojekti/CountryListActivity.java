@@ -2,6 +2,7 @@ package com.example.sciprojekti;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import androidx.cursoradapter.widget.SimpleCursorAdapter;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,14 +10,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
+import android.widget.Toast;
+
+import java.util.stream.IntStream;
 
 public class CountryListActivity extends AppCompatActivity {
 
     private DBManager dbManager;
 
     private ListView listView;
+
+    private RelativeLayout totalBar;
+
+
 
     private SimpleCursorAdapter adapter;
 
@@ -35,11 +47,16 @@ public class CountryListActivity extends AppCompatActivity {
         dbManager.open();
         Cursor cursor = dbManager.fetch();
 
+
         listView = (ListView) findViewById(R.id.list_view);
         listView.setEmptyView(findViewById(R.id.empty));
+        totalBar= (RelativeLayout) findViewById(R.id.total_bar);
 
         adapter = new SimpleCursorAdapter(this, R.layout.activity_view_record, cursor, from, to, 0);
         adapter.notifyDataSetChanged();
+
+        TextView sijoitus = (TextView) findViewById(R.id.total_vesi_number);
+        sijoitus.setText(getTotVesi());
 
         listView.setAdapter(adapter);
 
@@ -64,6 +81,8 @@ public class CountryListActivity extends AppCompatActivity {
                 modify_intent.putExtra("vetta", vetta);
 
                 startActivity(modify_intent);
+                //paivitetaan totalit
+
             }
         });
     }
@@ -85,6 +104,27 @@ public class CountryListActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    //Kokonaiskulutuksen laskeminen
+    public String getTotVesi(){
+        int vesi = 0;
+        final String[] kolumni = new String[] {  DatabaseHelper.VESI };
+        if(kolumni.length>1){
+            int[] sailo=convert(kolumni);
+            for (int i : sailo)
+                vesi += i;
+        }
+        return String.valueOf(vesi);
+    }
+    //muuttaa jonon Stringeja numeroiks
+    private int[] convert(String[] string) {
+        int number[] = new int[string.length];
+
+        for (int i = 0; i < string.length; i++) {
+            number[i] = Integer.parseInt(string[i]);
+        }
+        return number;
     }
 
 }

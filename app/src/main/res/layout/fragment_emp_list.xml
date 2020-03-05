@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
+
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
@@ -12,10 +13,34 @@
     </ListView>
 
     <RelativeLayout
+        android:id="@+id/total_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/tot_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="TOTAL"
+            />
+        <TextView
+            android:id="@+id/total_vesi_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tot_text"
+            android:text="num"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/empty"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentBottom="true">
+
 
         <TextView
             android:id="@+id/empty_text"

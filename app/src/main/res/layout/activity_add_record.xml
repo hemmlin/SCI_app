@@ -5,12 +5,14 @@
     android:orientation="vertical"
     android:padding="20dp" >
 
+
+
     <EditText
         android:id="@+id/subject_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="tuote" >
+        android:hint="tuote">
 
         <requestFocus />
     </EditText>
@@ -24,6 +26,19 @@
         android:inputType="textMultiLine"
         android:minLines="5" >
     </EditText>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/tuote_array"
+        android:prompt="@string/tuote_prompt" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
 
     <Button
         android:id="@+id/add_record"
