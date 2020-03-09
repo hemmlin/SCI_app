@@ -1,5 +1,6 @@
 package com.example.sciprojekti;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -20,6 +21,8 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class CountryListActivity extends AppCompatActivity {
@@ -33,6 +36,7 @@ public class CountryListActivity extends AppCompatActivity {
 
 
     private SimpleCursorAdapter adapter;
+    //private ArrayList<DatabaseGet> userModelArrayList;
 
     final String[] from = new String[] { DatabaseHelper._ID,
             DatabaseHelper.SUBJECT, DatabaseHelper.DESC, DatabaseHelper.VESI };
@@ -58,7 +62,7 @@ public class CountryListActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
         TextView sijoitus = (TextView) findViewById(R.id.total_vesi_number);
-        sijoitus.setText(getTotVesi());
+        sijoitus.setText("0");
 
         listView.setAdapter(adapter);
 
@@ -107,27 +111,43 @@ public class CountryListActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+/*
+    DatabaseHelper db = new DatabaseHelper(this);
 
-    //Kokonaiskulutuksen laskeminen
+
     public String getTotVesi(){
         int vesi = 0;
-        String[] kolumni = new String[] {  DatabaseHelper.VESI };
-        if(kolumni.length>1){
+        List<String> kolumni = db.VEDET;
+        //new String[] {  DatabaseHelper.VESI };
+        if(kolumni.size()>1){
             int[] sailo=convert(kolumni);
             for (int i : sailo)
                 vesi += i;
         }
-        Log.d("total_count", "getTotVesi: "+kolumni);
-        return String.valueOf(vesi);
+        return getString(vesi);
     }
-    //muuttaa jonon Stringeja numeroiks
-    private int[] convert(String[] string) {
-        int number[] = new int[string.length];
 
-        for (int i = 0; i < string.length; i++) {
-            number[i] = Integer.parseInt(string[i]);
+    public int[] convert(List<String> string) {
+        int number[] = new int[string.size()];
+
+        for (int i = 0; i < string.size(); i++) {
+            number[i] = Integer.parseInt(string.get(i));
         }
         return number;
     }
+    private void  tiedonLataus () {
+        getApplicationContext();
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        List<String> kolumni = db.getAllVedet();
+
+        Log.d("total_count", "getTotVesi: "+kolumni);
+        TextView sijoitus = (TextView) findViewById(R.id.total_vesi_number);
+        sijoitus.setText(getTotVesi());
+    }
+    */
+    //Kokonaiskulutuksen laskeminen
+    //muuttaa jonon Stringeja numeroiks
+
 
 }
