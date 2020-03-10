@@ -15,7 +15,7 @@
         <item>jauhelliha</item>
         <item>test</item>
     </string-array>
-
+<<<<<<< HEAD
 
     <!-- Oma profiili -->
     <string name="nimi">Nimi:</string>
@@ -40,8 +40,7 @@
     <string name="teemu">Teemu Teekkari</string>
     <string name="contentdesc">contentdesc</string>
 
-
+=======
     <string name="vesi_Maito">3</string>
-
-<!--cd304806d7e3873f2a19dbfb8520b19c054e894e-->
+>>>>>>> cd304806d7e3873f2a19dbfb8520b19c054e894e
 </resources>
