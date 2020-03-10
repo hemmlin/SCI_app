@@ -15,4 +15,28 @@
         <item>jauhelliha</item>
         <item>test</item>
     </string-array>
+
+    <!-- Oma profiili -->
+    <string name="nimi">Nimi:</string>
+    <string name="ikaryhma">Ikäryhmä:</string>
+    <string name="koulutus">Koulutus:</string>
+    <string name="ruokavalio">Ruokavalio:</string>
+    <string name="kulutustottumukset">Kulutustottumukset:</string>
+    <string name="sukupuoli">Sukupuoli:</string>
+    <string name="ei_maaritelty">Ei vielä määritelty</string>
+
+    <string name="edit_button">Muokkaa</string>
+
+    <!-- Muokkaa profiilia -->
+    <string name="muokkaa_profiilia">Muokkaa profiilia</string>
+    <string name="syota_nimi">Nimi</string>
+    <string name="syota_ikaryhma">Ikäryhmä</string>
+    <string name="syota_koulutus">Koulutus</string>
+    <string name="syota_ruokavalio">Ruokavalio</string>
+    <string name="syota_kulutustottumukset">Kulutustottumukset</string>
+    <string name="ok_button">OK</string>
+    <string name="syota_sukupuoli">Sukupuoli</string>
+    <string name="teemu">Teemu Teekkari</string>
+    <string name="contentdesc">contentdesc</string>
+
 </resources>
