@@ -44,11 +44,11 @@
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/vesi_pisara"
-        android:background="@drawable/water_drop"
+        android:background="@drawable/pisara2"
         android:layout_width="65dp"
         android:layout_height="54dp"
         android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/desc"
+        android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_centerInParent="true">
 
@@ -67,6 +67,33 @@
             android:textStyle="bold"
             android:text="3l"
      />
+    </RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/hiilijalki"
+        android:background="@drawable/jalka2"
+        android:layout_width="60dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/vesi_pisara"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/hiili"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="8dp"
+            android:textSize="20sp"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:text="3l"
+
+            />
     </RelativeLayout>
 
 </RelativeLayout>

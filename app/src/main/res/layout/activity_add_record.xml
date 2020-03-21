@@ -16,7 +16,7 @@
 
         <requestFocus />
     </EditText>
--->
+
 
     <Spinner
         android:id="@+id/spinner1"
@@ -24,6 +24,11 @@
         android:layout_height="wrap_content"
         android:entries="@array/tuote_array"
         android:prompt="@string/tuote_prompt" />
+-->
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/searchablespinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
     <EditText
