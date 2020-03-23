@@ -24,8 +24,7 @@
         android:layout_toRightOf="@id/id"
         android:maxLines="1"
         android:padding="3dp"
-        android:textSize="27sp"
-        android:textStyle="bold"
+        android:textSize="20sp"
         android:text="nimi"/>
 
     <TextView
@@ -44,8 +43,8 @@
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/vesi_pisara"
-        android:background="@drawable/pisara2"
-        android:layout_width="65dp"
+        android:background="@drawable/vesi"
+        android:layout_width="50dp"
         android:layout_height="54dp"
         android:layout_marginLeft="10dp"
         android:layout_alignParentRight="true"
