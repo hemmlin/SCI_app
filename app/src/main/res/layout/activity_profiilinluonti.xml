@@ -20,32 +20,6 @@
         app:layout_constraintTop_toBottomOf="@+id/muokkaa_profiilia" />
 
     <EditText
-        android:id="@+id/syota_ikaryhma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/syota_ikaryhma"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/syota_nimi" />
-
-    <EditText
-        android:id="@+id/syota_sukupuoli"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/syota_sukupuoli"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/syota_ikaryhma" />
-
-    <EditText
         android:id="@+id/syota_koulutus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,19 +31,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/syota_sukupuoli"/>
-
-    <EditText
-        android:id="@+id/syota_ruokavalio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/syota_ruokavalio"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/syota_koulutus" />
 
     <EditText
         android:id="@+id/syota_kulutustottumukset"
@@ -88,14 +49,15 @@
         android:id="@+id/muokkaa_profiilia"
         android:layout_width="260dp"
         android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="@string/muokkaa_profiilia"
+        android:textColor="#003A59"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,14 +71,52 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
+        android:background="#A4CEE7"
         android:hint="@string/ok_button"
         android:text="@android:string/ok"
+        android:textColor="#003A59"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/syota_kulutustottumukset"
         app:layout_constraintVertical_bias="0.883" />
+
+    <Spinner
+        android:id="@+id/syota_ikaryhma"
+        android:layout_width="214dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:entries="@array/ikaryhma_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/syota_nimi" />
+
+    <Spinner
+        android:id="@+id/syota_sukupuoli"
+        android:layout_width="214dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/sukupuoli_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/syota_ikaryhma" />
+
+    <Spinner
+        android:id="@+id/syota_ruokavalio"
+        android:layout_width="214dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:entries="@array/ruokavalio_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/syota_koulutus" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

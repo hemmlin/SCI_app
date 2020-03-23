@@ -30,17 +30,17 @@
             android:id="@+id/profile"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:elevation="@dimen/fab_margin"
             android:layout_below="@+id/header_cover_image"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-130dp"
             android:clickable="true"
+            android:elevation="@dimen/fab_margin"
+            android:focusable="true"
             android:padding="20dp"
             android:scaleType="centerCrop"
             android:src="@drawable/man"
-            app:civ_border_color="#FFFFFFFF"
-            app:civ_border_width="3dp"
-            android:focusable="true" />
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="3dp" />
 
         <RelativeLayout
             android:id="@+id/profile_layout"
@@ -48,7 +48,7 @@
             android:layout_height="240dp"
             android:layout_below="@+id/header_cover_image"
             android:layout_marginTop="-1dp"
-            android:background="#EB6EDFAA"
+            android:background="#EB78D28C"
             android:paddingBottom="24dp">
 
 
@@ -60,7 +60,7 @@
                 android:layout_marginTop="85dp"
                 android:gravity="center"
                 android:text="@string/teemu"
-                android:textColor="#fff"
+                android:textColor="#003A59"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -76,6 +76,7 @@
                 android:layout_marginRight="21dp"
                 android:background="#A4CEE7"
                 android:text="@string/edit_button"
+                android:textColor="#003A59"
                 android:textSize="12sp" />
 
         </RelativeLayout>
@@ -85,16 +86,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/profile_layout"
-            android:layout_margin="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="0dp"
             android:background="#fff"
             android:orientation="vertical"
-            android:paddingLeft="5dp"
-            android:paddingTop="10dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="10dp"
 
-            >
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/ikaryhma"
@@ -103,11 +106,11 @@
                 android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/ikaryhma"
+                android:textColor="#003A59"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/kulutustottumukset"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <TextView
@@ -117,10 +120,10 @@
                 android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/sukupuoli"
+                android:textColor="#003A59"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ikaryhma"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/ikaryhma" />
 
             <TextView
                 android:id="@+id/koulutus"
@@ -129,11 +132,12 @@
                 android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
                 android:clickable="true"
+                android:focusable="true"
                 android:text="@string/koulutus"
+                android:textColor="#003A59"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sukupuoli"
-                android:focusable="true" />
+                app:layout_constraintTop_toBottomOf="@+id/sukupuoli" />
 
             <TextView
                 android:id="@+id/ruokavalio"
@@ -142,10 +146,10 @@
                 android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/ruokavalio"
+                android:textColor="#003A59"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/koulutus"
-                 />
+                app:layout_constraintTop_toBottomOf="@+id/koulutus" />
 
             <TextView
                 android:id="@+id/kulutustottumukset"
@@ -154,10 +158,10 @@
                 android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/kulutustottumukset"
+                android:textColor="#003A59"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ruokavalio"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/ruokavalio" />
 
             <TextView
                 android:id="@+id/prof_ikaryhma"
@@ -167,9 +171,9 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/ei_maaritelty"
-                app:layout_constraintLeft_toLeftOf="@+id/ikaryhma"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/ikaryhma"
                 app:layout_constraintStart_toEndOf="@+id/ikaryhma"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -193,10 +197,11 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="208dp"
-                android:layout_marginRight="208dp"
+                android:layout_marginEnd="180dp"
+                android:layout_marginRight="180dp"
                 android:text="@string/ei_maaritelty"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/koulutus"
                 app:layout_constraintTop_toBottomOf="@+id/prof_sukupuoli" />
 
             <TextView
@@ -220,6 +225,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/ei_maaritelty"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.039"
                 app:layout_constraintStart_toEndOf="@+id/kulutustottumukset"

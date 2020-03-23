@@ -2,6 +2,7 @@ package com.example.sciprojekti;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ViivakoodiActivity.class));
-
             }
         });
         listabtn.setOnClickListener(new View.OnClickListener() {

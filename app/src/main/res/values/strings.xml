@@ -40,8 +40,31 @@
     <string name="teemu">Teemu Teekkari</string>
     <string name="contentdesc">contentdesc</string>
 
+    <!-- Pudotusvalikko ikäryhmille -->
+    <string-array name="ikaryhma_array">
+        <item>15–25</item>
+        <item>25–40</item>
+        <item>40–55</item>
+        <item>55+</item>
+    </string-array>
+
+    <!-- Pudotusvalikko sukupuolelle -->
+    <string-array name="sukupuoli_array">
+        <item>Nainen</item>
+        <item>Mies</item>
+        <item>Muu</item>
+    </string-array>
+
+    <!-- Pudotusvalikko ruokavalioille -->
+    <string-array name="ruokavalio_array">
+        <item>Sekasyöjä</item>
+        <item>Pescovegetaristi</item>
+        <item>Lakto-ovo-vegetaristi</item>
+        <item>Vegaani</item>
+    </string-array>
+
+
 
     <string name="vesi_Maito">3</string>
 
-<!--cd304806d7e3873f2a19dbfb8520b19c054e894e-->
 </resources>

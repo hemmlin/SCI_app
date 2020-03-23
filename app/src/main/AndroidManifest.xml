@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Profiilinluonti"
-                  android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".ProfiiliActivity"
+                  ></activity>
         <activity android:name=".ProfiiliActivity"
-                  android:parentActivityName=".Profiilinluonti"/>
+            android:parentActivityName=".MainActivity"
+                  />
 
         <activity android:name=".KauppalistaActivity" />
         <activity android:name=".ViivakoodiActivity" />
