@@ -22,11 +22,9 @@
     <string name="nimi">Nimi:</string>
     <string name="ikaryhma">Ikäryhmä:</string>
     <string name="sukupuoli">Sukupuoli:</string>
-    <!--<string name="koulutus">Koulutus:</string>-->
     <string name="ruokavalio">Ruokavalio:</string>
     <string name="allergiat">Allergiat:</string>
-    <!--<string name="kulutustottumukset">Kulutustottumukset:</string>-->
-    <string name="arvot">Preferenssit:</string>
+    <string name="arvot">Arvot:</string>
     <string name="seek_hiilijalanjalki">Ostoslistan hiilijalanjälki:</string>
     <string name="seek_vesijalanjalki">Ostoslistan vesijalanjälki:</string>
     <string name="ei_maaritelty">Ei vielä määritelty</string>
@@ -41,10 +39,8 @@
     <string name="syota_nimi">Nimi</string>
     <string name="syota_ikaryhma">Ikäryhmä</string>
     <string name="syota_sukupuoli">Sukupuoli</string>
-    <!--<string name="syota_koulutus">Koulutus</string>-->
     <string name="syota_ruokavalio">Ruokavalio</string>
     <string name="syota_allergiat">Allergiat</string>
-    <!--<string name="syota_kulutustottumukset">Kulutustottumukset</string>-->
     <string name="ok_button">OK</string>
     <string name="contentdesc">contentdesc</string>
 
@@ -76,17 +72,6 @@
         <item>Lakto-ovo-vegetaristi</item>
         <item>Vegaani</item>
     </string-array>
-
-    <!-- Pudotusvalikko arvoille -->
-    <string-array name="arvo_array">
-        <item>Kotimaisuus</item>
-        <item>Eettisyys</item>
-        <item>Edullisuus</item>
-        <item>Hiilijalanjäljen minimointi</item>
-        <item>Vesijalanjäljen minimointi</item>
-    </string-array>
-
-
 
     <string name="vesi_Maito">3</string>
 

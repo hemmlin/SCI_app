@@ -9,12 +9,14 @@
 
     <EditText
         android:id="@+id/syota_nimi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/syota_nimi"
         android:inputType="textPersonName"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,8 +60,8 @@
 
     <Spinner
         android:id="@+id/syota_ikaryhma"
-        android:layout_width="214dp"
-        android:layout_height="40dp"
+        android:layout_width="230dp"
+        android:layout_height="31dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:entries="@array/ikaryhma_array"
@@ -70,8 +72,8 @@
 
     <Spinner
         android:id="@+id/syota_sukupuoli"
-        android:layout_width="214dp"
-        android:layout_height="40dp"
+        android:layout_width="230dp"
+        android:layout_height="31dp"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:entries="@array/sukupuoli_array"
@@ -82,8 +84,8 @@
 
     <Spinner
         android:id="@+id/syota_ruokavalio"
-        android:layout_width="214dp"
-        android:layout_height="40dp"
+        android:layout_width="230dp"
+        android:layout_height="31dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:entries="@array/ruokavalio_array"
@@ -94,11 +96,13 @@
 
     <EditText
         android:id="@+id/syota_allergiat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
         android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="@string/syota_allergiat"
+        android:textSize="15sp"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -107,11 +111,12 @@
 
     <Switch
         android:id="@+id/switch_kotimaisuus"
-        android:layout_width="211dp"
+        android:layout_width="230dp"
         android:layout_height="31dp"
         android:layout_marginTop="15dp"
         android:checked="false"
         android:text="@string/kotimaisuus"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,48 +124,52 @@
         tools:checked="false" />
     <Switch
         android:id="@+id/switch_eettisyys"
-        android:layout_width="211dp"
+        android:layout_width="230dp"
         android:layout_height="31dp"
         android:text="@string/eettisyys"
         tools:layout_editor_absoluteX="89dp"
         tools:layout_editor_absoluteY="473dp"
         android:layout_marginTop="15dp"
+        android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@+id/switch_kotimaisuus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"/>
     <Switch
         android:id="@+id/switch_edullisuus"
-        android:layout_width="211dp"
+        android:layout_width="230dp"
         android:layout_height="31dp"
         android:text="@string/edullisuus"
         tools:layout_editor_absoluteX="89dp"
         tools:layout_editor_absoluteY="473dp"
         android:layout_marginTop="15dp"
+        android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@+id/switch_eettisyys"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"/>
     <Switch
         android:id="@+id/switch_hiilijalanjalki"
-        android:layout_width="211dp"
+        android:layout_width="230dp"
         android:layout_height="31dp"
         android:text="@string/hiilijalanjalki_min"
         tools:layout_editor_absoluteX="89dp"
         tools:layout_editor_absoluteY="473dp"
         android:layout_marginTop="15dp"
+        android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@+id/switch_edullisuus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"/>
     <Switch
         android:id="@+id/switch_vesijalanjalki"
-        android:layout_width="211dp"
+        android:layout_width="230dp"
         android:layout_height="31dp"
         android:text="@string/vesijalanjalki_min"
         tools:layout_editor_absoluteX="89dp"
         tools:layout_editor_absoluteY="473dp"
         android:layout_marginTop="15dp"
+        android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@+id/switch_hiilijalanjalki"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

@@ -23,10 +23,6 @@ public class Profiilinluonti extends AppCompatActivity {
     public static final String sRuokavalio = "key_save_ruokavalio";
     public static final String sAllergiat = "key_save_allergiat";
     public static final String sKotimaisuus = "key_save_kotimaisuus";
-    public static final String sEettisyys = "key_save_eettisyys";
-    public static final String sEdullisuus = "key_save_edullisuus";
-    public static final String sHiili = "key_save_hiili";
-    public static final String sVesi = "key_save_vesi";
 
     /**kirjotettavat ja valittavat laatikot*/
     EditText etNimi, etAllergiat;
