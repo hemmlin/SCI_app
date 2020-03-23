@@ -16,7 +16,7 @@
 
         <com.toptoche.searchablespinnerlibrary.SearchableSpinner android:id="@+id/spinner_search" android:layout_width="wrap_content" android:layout_height="50dp" />
 
-        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/spinner_search" android:background="#212121">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/spinner_search" android:background="@drawable/taustak">
         </LinearLayout>
 
     </RelativeLayout>
