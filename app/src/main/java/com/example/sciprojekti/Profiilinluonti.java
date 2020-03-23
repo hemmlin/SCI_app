@@ -8,9 +8,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.Switch;
 
 import static com.example.sciprojekti.ProfiiliActivity.MyPREFERENCES;
 
@@ -19,13 +20,18 @@ public class Profiilinluonti extends AppCompatActivity {
     public static final String sNimi = "key_save_nimi";
     public static final String sIkaryhma = "key_save_ikaryhma";
     public static final String sSukupuoli = "key_save_sukupuoli";
-    public static final String sKoulutus = "key_save_koulutus";
     public static final String sRuokavalio = "key_save_ruokavalio";
-    public static final String sKulutustottumukset = "key_save_kulutustottumukset";
+    public static final String sAllergiat = "key_save_allergiat";
+    public static final String sKotimaisuus = "key_save_kotimaisuus";
+    public static final String sEettisyys = "key_save_eettisyys";
+    public static final String sEdullisuus = "key_save_edullisuus";
+    public static final String sHiili = "key_save_hiili";
+    public static final String sVesi = "key_save_vesi";
 
     /**kirjotettavat ja valittavat laatikot*/
-    EditText etNimi, etKoulutus, etKulutustottumukset;
+    EditText etNimi, etAllergiat;
     Spinner spIkaryhma, spSukupuoli, spRuokavalio;
+    Switch swKotimaisuus, swEettisyys, swEdullisuus, swHiili, swVesi;
 
     SharedPreferences sharedPreferences;
 
@@ -40,14 +46,17 @@ public class Profiilinluonti extends AppCompatActivity {
         etNimi = findViewById(R.id.syota_nimi);
         spIkaryhma = findViewById(R.id.syota_ikaryhma);
         spSukupuoli = findViewById(R.id.syota_sukupuoli);
-        etKoulutus = findViewById(R.id.syota_koulutus);
         spRuokavalio = findViewById(R.id.syota_ruokavalio);
-        etKulutustottumukset = findViewById(R.id.syota_kulutustottumukset);
+        etAllergiat = findViewById(R.id.syota_allergiat);
+        swKotimaisuus = findViewById(R.id.switch_kotimaisuus);
+        swEettisyys = findViewById(R.id.switch_eettisyys);
+        swEdullisuus = findViewById(R.id.switch_edullisuus);
+        swHiili = findViewById(R.id.switch_hiilijalanjalki);
+        swVesi = findViewById(R.id.switch_vesijalanjalki);
 
         /**lähetä tiedot ProfiiliActivityyn, kun kayttaja painaa OK-nappia**/
         Button ok_nappi = findViewById(R.id.ok_nappi);
         sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-
 
         ok_nappi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,9 +66,8 @@ public class Profiilinluonti extends AppCompatActivity {
                 String strNimi = etNimi.getText().toString().trim();
                 String strIkaryhma = spIkaryhma.getSelectedItem().toString().trim();
                 String strSukupuoli = spSukupuoli.getSelectedItem().toString().trim();
-                String strKoulutus = etKoulutus.getText().toString().trim();
+                String strAllergiat = etAllergiat.getText().toString().trim();
                 String strRuokavalio = spRuokavalio.getSelectedItem().toString().trim();
-                String strKulutustottumukset = etKulutustottumukset.getText().toString().trim();
 
                 Intent intent = new Intent(Profiilinluonti.this, ProfiiliActivity.class);
                 Bundle bundle = new Bundle();
@@ -69,9 +77,32 @@ public class Profiilinluonti extends AppCompatActivity {
                 editor.putString(sNimi, strNimi);
                 editor.putString(sIkaryhma, strIkaryhma);
                 editor.putString(sSukupuoli, strSukupuoli);
-                editor.putString(sKoulutus, strKoulutus);
+                editor.putString(sAllergiat, strAllergiat);
                 editor.putString(sRuokavalio, strRuokavalio);
-                editor.putString(sKulutustottumukset, strKulutustottumukset);
+
+                String finalStr = new String();
+
+                if (swKotimaisuus.isChecked()) {
+                    finalStr += "Kotimaisuus ";
+                }
+
+                if (swEettisyys.isChecked()) {
+                    finalStr += "Eettisyys ";
+                }
+
+                if (swEdullisuus.isChecked()) {
+                    finalStr += "Edullisuus ";
+                }
+
+                if (swHiili.isChecked()) {
+                    finalStr += "Hiilijalanjäljen minimointi ";
+                }
+
+                if (swVesi.isChecked()) {
+                    finalStr += "Vesijalanjäljen minimointi ";
+                }
+
+                editor.putString(sKotimaisuus, finalStr);
                 editor.apply();
 
                 /**lähetä tiedot ProfiiliActivityyn**/
@@ -91,13 +122,11 @@ public class Profiilinluonti extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(MyPREFERENCES, MODE_MULTI_PROCESS);
 
         etNimi = findViewById(R.id.syota_nimi);
-        etKoulutus = findViewById(R.id.syota_koulutus);
-        etKulutustottumukset = findViewById(R.id.syota_kulutustottumukset);
+        etAllergiat = findViewById(R.id.syota_allergiat);
 
         /**Asetetaan haluttu teksti oikeeseen boksiin*/
         etNimi.setText(sharedPreferences.getString(sNimi,""));
-        etKoulutus.setText(sharedPreferences.getString(sKoulutus,""));
-        etKulutustottumukset.setText(sharedPreferences.getString(sKulutustottumukset,""));
+        etAllergiat.setText(sharedPreferences.getString(sAllergiat,""));
     }
 
     /**Tallentaa datan, kun käyttäjä sulkee äpsin*/
@@ -107,8 +136,7 @@ public class Profiilinluonti extends AppCompatActivity {
         super.onPause();
 
         etNimi = findViewById(R.id.syota_nimi);
-        etKoulutus = findViewById(R.id.syota_koulutus);
-        etKulutustottumukset = findViewById(R.id.syota_kulutustottumukset);
+        etAllergiat = findViewById(R.id.syota_allergiat);
 
         sharedPreferences
                 = getSharedPreferences(MyPREFERENCES,
@@ -117,8 +145,7 @@ public class Profiilinluonti extends AppCompatActivity {
                 = sharedPreferences.edit();
 
         myEdit.putString(sNimi,etNimi.getText().toString().trim());
-        myEdit.putString(sKoulutus,etKoulutus.getText().toString().trim());
-        myEdit.putString(sKulutustottumukset,etKulutustottumukset.getText().toString().trim());
+        myEdit.putString(sAllergiat,etAllergiat.getText().toString().trim());
 
         myEdit.apply();
     }

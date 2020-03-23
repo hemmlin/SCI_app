@@ -13,11 +13,11 @@ import android.view.View;
 import android.widget.Toast;
 
 import static com.example.sciprojekti.Profiilinluonti.sIkaryhma;
-import static com.example.sciprojekti.Profiilinluonti.sKoulutus;
-import static com.example.sciprojekti.Profiilinluonti.sKulutustottumukset;
+import static com.example.sciprojekti.Profiilinluonti.sAllergiat;
 import static com.example.sciprojekti.Profiilinluonti.sNimi;
 import static com.example.sciprojekti.Profiilinluonti.sRuokavalio;
 import static com.example.sciprojekti.Profiilinluonti.sSukupuoli;
+import static com.example.sciprojekti.Profiilinluonti.sKotimaisuus;
 
 public class ProfiiliActivity extends AppCompatActivity {
 
@@ -38,16 +38,17 @@ public class ProfiiliActivity extends AppCompatActivity {
             TextView nimi = findViewById(R.id.omaprofiili_nimi);
             TextView ikaryhma = findViewById(R.id.prof_ikaryhma);
             TextView sukupuoli = findViewById(R.id.prof_sukupuoli);
-            TextView koulutus = findViewById(R.id.prof_koulutus);
+            TextView allergiat = findViewById(R.id.prof_allergiat);
             TextView ruokavalio = findViewById(R.id.prof_ruokavalio);
-            TextView kulutustottumukset = findViewById(R.id.prof_kulutustottumukset);
+            TextView kotimaisuus = findViewById(R.id.prof_arvot);
+
 
             nimi.setText(sharedPreferences.getString(sNimi, ""));
             ikaryhma.setText(sharedPreferences.getString(sIkaryhma, ""));
             sukupuoli.setText(sharedPreferences.getString(sSukupuoli, ""));
-            koulutus.setText(sharedPreferences.getString(sKoulutus, ""));
+            allergiat.setText(sharedPreferences.getString(sAllergiat, ""));
             ruokavalio.setText(sharedPreferences.getString(sRuokavalio, ""));
-            kulutustottumukset.setText(sharedPreferences.getString(sKulutustottumukset, ""));
+            kotimaisuus.setText(sharedPreferences.getString(sKotimaisuus, ""));
 
             /**Toasti*/
             CharSequence text = "Profiilin tiedot tallennettu!";
@@ -60,7 +61,9 @@ public class ProfiiliActivity extends AppCompatActivity {
         }
 
         /**TO DO
-         * mitä helvettiä
+         * ruokakunta, allergiat, slaiderit vesi- ja hiilijalanjäljelle
+         * ostoslistan jakamisnappi
+         * mainiin neljäs nappi? kauppalistan jakamiseen liittyen
          * RGB:t taltee*/
 
         /**Siirry muokkausscreeniin*/
@@ -86,17 +89,17 @@ public class ProfiiliActivity extends AppCompatActivity {
         TextView nimi = findViewById(R.id.omaprofiili_nimi);
         TextView ikaryhma = findViewById(R.id.prof_ikaryhma);
         TextView sukupuoli = findViewById(R.id.prof_sukupuoli);
-        TextView koulutus = findViewById(R.id.prof_koulutus);
+        TextView allergiat = findViewById(R.id.prof_allergiat);
         TextView ruokavalio = findViewById(R.id.prof_ruokavalio);
-        TextView kulutustottumukset = findViewById(R.id.prof_kulutustottumukset);
+        TextView kotimaisuus = findViewById(R.id.prof_arvot);
 
         /**Asetetaan haluttu teksti oikeeseen boksiin*/
         nimi.setText(sharedPreferences.getString(sNimi,""));
         ikaryhma.setText(sharedPreferences.getString(sIkaryhma,""));
         sukupuoli.setText(sharedPreferences.getString(sSukupuoli,""));
-        koulutus.setText(sharedPreferences.getString(sKoulutus,""));
+        allergiat.setText(sharedPreferences.getString(sAllergiat,""));
         ruokavalio.setText(sharedPreferences.getString(sRuokavalio,""));
-        kulutustottumukset.setText(sharedPreferences.getString(sKulutustottumukset,""));
+        kotimaisuus.setText(sharedPreferences.getString(sKotimaisuus, ""));
     }
 
     /**Tallentaa datan, kun käyttäjä sulkee äpsin*/
@@ -108,9 +111,9 @@ public class ProfiiliActivity extends AppCompatActivity {
         TextView nimi = findViewById(R.id.omaprofiili_nimi);
         TextView ikaryhma = findViewById(R.id.prof_ikaryhma);
         TextView sukupuoli = findViewById(R.id.prof_sukupuoli);
-        TextView koulutus = findViewById(R.id.prof_koulutus);
+        TextView allergiat = findViewById(R.id.prof_allergiat);
         TextView ruokavalio = findViewById(R.id.prof_ruokavalio);
-        TextView kulutustottumukset = findViewById(R.id.prof_kulutustottumukset);
+        TextView kotimaisuus = findViewById(R.id.prof_arvot);
 
         sharedPreferences
                 = getSharedPreferences(MyPREFERENCES,
@@ -121,9 +124,9 @@ public class ProfiiliActivity extends AppCompatActivity {
         myEdit.putString(sNimi,nimi.getText().toString().trim());
         myEdit.putString(sIkaryhma,ikaryhma.getText().toString().trim());
         myEdit.putString(sSukupuoli,sukupuoli.getText().toString().trim());
-        myEdit.putString(sKoulutus,koulutus.getText().toString().trim());
+        myEdit.putString(sAllergiat,allergiat.getText().toString().trim());
         myEdit.putString(sRuokavalio,ruokavalio.getText().toString().trim());
-        myEdit.putString(sKulutustottumukset,kulutustottumukset.getText().toString().trim());
+        myEdit.putString(sKotimaisuus,kotimaisuus.getText().toString().trim());
 
         myEdit.apply();
     }

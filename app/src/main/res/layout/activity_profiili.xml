@@ -36,7 +36,7 @@
             android:clickable="true"
             android:elevation="@dimen/fab_margin"
             android:focusable="true"
-            android:padding="20dp"
+            android:padding="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/man"
             app:civ_border_color="#FFFFFF"
@@ -45,9 +45,9 @@
         <RelativeLayout
             android:id="@+id/profile_layout"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
+            android:layout_height="190dp"
             android:layout_below="@+id/header_cover_image"
-            android:layout_marginTop="-1dp"
+            android:layout_marginTop="-15dp"
             android:background="#EB78D28C"
             android:paddingBottom="24dp">
 
@@ -66,14 +66,16 @@
 
             <Button
                 android:id="@+id/edit"
-                android:layout_width="66dp"
+                android:layout_width="65dp"
                 android:layout_height="34dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="183dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="140dp"
                 android:layout_marginEnd="21dp"
                 android:layout_marginRight="21dp"
+                android:layout_marginBottom="0dp"
                 android:background="#A4CEE7"
                 android:text="@string/edit_button"
                 android:textColor="#003A59"
@@ -83,19 +85,18 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/prof_tiedot"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/profile_layout"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="7dp"
             android:background="#fff"
             android:orientation="vertical"
 
             android:paddingLeft="5dp"
-            android:paddingTop="5dp"
+            android:paddingTop="0dp"
             android:paddingRight="5dp"
             android:paddingBottom="5dp">
 
@@ -109,7 +110,6 @@
                 android:textColor="#003A59"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/kulutustottumukset"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -126,20 +126,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/ikaryhma" />
 
             <TextView
-                android:id="@+id/koulutus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_marginTop="5dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:text="@string/koulutus"
-                android:textColor="#003A59"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sukupuoli" />
-
-            <TextView
                 android:id="@+id/ruokavalio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -149,19 +135,58 @@
                 android:textColor="#003A59"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/koulutus" />
+                app:layout_constraintTop_toBottomOf="@+id/sukupuoli" />
 
             <TextView
-                android:id="@+id/kulutustottumukset"
+                android:id="@+id/allergiat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/kulutustottumukset"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/allergiat"
                 android:textColor="#003A59"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ruokavalio" />
+
+            <TextView
+                android:id="@+id/arvot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/arvot"
+                android:textColor="#003A59"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/allergiat" />
+
+            <TextView
+                android:id="@+id/vesijalanjalki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="50dp"
+                android:text="@string/seek_vesijalanjalki"
+                android:textColor="#003A59"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/arvot" />
+
+            <TextView
+                android:id="@+id/hiilijalanjalki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_margin="5dp"
+                android:text="@string/seek_hiilijalanjalki"
+                android:textColor="#003A59"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vesijalanjalki" />
 
             <TextView
                 android:id="@+id/prof_ikaryhma"
@@ -191,20 +216,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/prof_ikaryhma" />
 
             <TextView
-                android:id="@+id/prof_koulutus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="180dp"
-                android:layout_marginRight="180dp"
-                android:text="@string/ei_maaritelty"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/koulutus"
-                app:layout_constraintTop_toBottomOf="@+id/prof_sukupuoli" />
-
-            <TextView
                 android:id="@+id/prof_ruokavalio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -215,21 +226,88 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.038"
                 app:layout_constraintStart_toEndOf="@+id/ruokavalio"
-                app:layout_constraintTop_toBottomOf="@+id/prof_koulutus" />
+                app:layout_constraintTop_toBottomOf="@+id/prof_sukupuoli" />
 
             <TextView
-                android:id="@+id/prof_kulutustottumukset"
+                android:id="@+id/prof_allergiat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="180dp"
+                android:layout_marginRight="180dp"
+                android:text="@string/ei_maaritelty"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/allergiat"
+                app:layout_constraintTop_toBottomOf="@+id/prof_ruokavalio" />
+
+            <TextView
+                android:id="@+id/prof_arvot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/ei_maaritelty"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.039"
-                app:layout_constraintStart_toEndOf="@+id/kulutustottumukset"
-                app:layout_constraintTop_toBottomOf="@+id/prof_ruokavalio" />
+                app:layout_constraintStart_toEndOf="@+id/arvot"
+                app:layout_constraintTop_toBottomOf="@+id/prof_allergiat" />
+
+            <TextView
+                android:id="@+id/prof_vesijalanjalki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/tyhja_ostoslista"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.039"
+                app:layout_constraintStart_toEndOf="@+id/vesijalanjalki"
+                app:layout_constraintTop_toBottomOf="@+id/prof_arvot" />
+
+            <TextView
+                android:id="@+id/prof_hiilijalanjalki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/tyhja_ostoslista"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.039"
+                app:layout_constraintStart_toEndOf="@+id/hiilijalanjalki"
+                app:layout_constraintTop_toBottomOf="@+id/prof_vesijalanjalki" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/prof_tiedot"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="65dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="150dp">
+
+            <TextView
+                android:id="@+id/profiili_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/profiili_desc"
+                android:textColor="#003A59"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </RelativeLayout>
