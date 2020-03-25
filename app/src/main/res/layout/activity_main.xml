@@ -75,11 +75,12 @@
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/roundedbutton"
-        android:text="viivakoodin luku"
+        android:text="qr-koodin luku"
         android:textColor="@color/tummasin"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@id/kauppalista_siirry"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
