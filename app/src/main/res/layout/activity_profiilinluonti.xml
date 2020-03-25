@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:background="#A4CEE7"
+        android:background="@drawable/lightblueroundedbutton"
         android:hint="@string/ok_button"
         android:text="@android:string/ok"
         android:textColor="#003A59"
