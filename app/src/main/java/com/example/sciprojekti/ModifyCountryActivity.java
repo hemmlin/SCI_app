@@ -52,13 +52,14 @@ public class ModifyCountryActivity extends Activity implements OnClickListener {
         String name = intent.getStringExtra("title");
         String desc = intent.getStringExtra("desc");
         String vesi = intent.getStringExtra("vetta");
+        String test = name.toLowerCase().trim().replace(",","").replace("ä","a");
 
         _id = Long.parseLong(id);
         otsikko.setText(name);
         //kuvan asetus
         try {
             Resources res = getResources();
-            String mDrawableName = name.toLowerCase().trim();
+            String mDrawableName = name.toLowerCase().trim().replace(",","").replace("ä","a").replace(" ","");
             int resID = res.getIdentifier(mDrawableName, "drawable", getPackageName());
             Drawable drawable = res.getDrawable(resID);
             kuva.setImageDrawable(drawable);

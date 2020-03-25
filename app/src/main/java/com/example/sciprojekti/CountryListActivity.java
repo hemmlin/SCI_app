@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import androidx.cursoradapter.widget.SimpleCursorAdapter;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
@@ -13,7 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -36,12 +39,15 @@ public class CountryListActivity extends AppCompatActivity {
 
 
     private SimpleCursorAdapter adapter;
+    //private SimpleCursorAdapter.bindView() listAdapter;
     //private ArrayList<DatabaseGet> userModelArrayList;
 
     final String[] from = new String[] { DatabaseHelper._ID,
             DatabaseHelper.SUBJECT, DatabaseHelper.DESC, DatabaseHelper.VESI };
 
-    final int[] to = new int[] { R.id.id, R.id.title, R.id.desc, R.id.vesi };
+    final int[] to = new int[] { R.id.id, R.id.title, R.id.desc, R.id.vesilataa };
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +65,43 @@ public class CountryListActivity extends AppCompatActivity {
         totalBar= (RelativeLayout) findViewById(R.id.total_bar);
 
         adapter = new SimpleCursorAdapter(this, R.layout.activity_view_record, cursor, from, to, 0);
+        final int[] imgs = new int[] { R.drawable.vesi1,R.drawable.vesi2,R.drawable.vesi3,R.drawable.vesi4,R.drawable.vesi5 };
+
+        adapter.setViewBinder(new SimpleCursorAdapter.ViewBinder() {
+            @Override
+            public boolean setViewValue(View view, Cursor cursor,
+                                        int columnIndex) {
+                switch (view.getId()) {
+                    case R.id.vesilataa:
+                        String imageType = cursor.getString(3);//getInt(columnIndex);//columnIndex
+                        int imageToBeShown=imgs[0];
+                        switch (imageType) {
+                            case "0":
+                                imageToBeShown=imgs[0];
+                                break;
+                            case "1":
+                                imageToBeShown=imgs[1];
+                                break;
+                            case "2":
+                                imageToBeShown=imgs[2];
+                                break;
+                            case "3":
+                                imageToBeShown=imgs[3];
+                                break;
+                            case "4":
+                                imageToBeShown=imgs[4];
+                                break;
+                            default:
+                                break;
+                        }
+                        ((ImageView)view).setImageResource(imageToBeShown);
+                        return true;
+                }
+                return false;
+            }
+        });
         adapter.notifyDataSetChanged();
+
 
         TextView sijoitus = (TextView) findViewById(R.id.total_vesi_number);
         sijoitus.setText("0");
@@ -73,18 +115,19 @@ public class CountryListActivity extends AppCompatActivity {
                 TextView idTextView = (TextView) view.findViewById(R.id.id);
                 TextView titleTextView = (TextView) view.findViewById(R.id.title);
                 TextView descTextView = (TextView) view.findViewById(R.id.desc);
-                TextView vesiTextView =(TextView) view.findViewById(R.id.vesi);
+                //TextView vesiTextView =(TextView) view.findViewById(R.id.vesi);
+
 
                 String id = idTextView.getText().toString();
                 String title = titleTextView.getText().toString();
                 String desc = descTextView.getText().toString();
-                String vetta = vesiTextView.getText().toString();
+                //String vetta = vesiTextView.getText().toString();
 
                 Intent modify_intent = new Intent(getApplicationContext(), ModifyCountryActivity.class);
                 modify_intent.putExtra("title", title);
                 modify_intent.putExtra("desc", desc);
                 modify_intent.putExtra("id", id);
-                modify_intent.putExtra("vetta", vetta);
+                //modify_intent.putExtra("vetta", vetta);
 
                 startActivity(modify_intent);
                 //paivitetaan totalit
@@ -92,6 +135,7 @@ public class CountryListActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -16,20 +16,20 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:maxLines="3"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/vesi_pisara"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/id"
-        android:maxLines="1"
         android:padding="3dp"
         android:textSize="20sp"
         android:text="nimi"/>
 
     <TextView
         android:id="@+id/desc"
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_alignBottom="@+id/vesi_pisara"
@@ -41,6 +41,13 @@
         android:visibility="visible"
         android:text="kpl"/>
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/vesilataa"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/hiilijalki"
+        />
+<!--
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/vesi_pisara"
         android:background="@drawable/vesi"
@@ -66,14 +73,14 @@
             android:textStyle="bold"
             android:text="3l"
      />
-    </RelativeLayout>
+    </RelativeLayout> -->
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/hiilijalki"
         android:background="@drawable/jalka2"
-        android:layout_width="60dp"
+        android:layout_width="40dp"
         android:layout_height="54dp"
         android:layout_marginLeft="10dp"
-        android:layout_toLeftOf="@+id/vesi_pisara"
+        android:layout_toRightOf="@+id/desc"
         android:layout_centerVertical="true"
         android:layout_centerInParent="true">
 

@@ -33,7 +33,7 @@ public class DBManager {
         ContentValues contentValue = new ContentValues();
         contentValue.put(DatabaseHelper.SUBJECT, name);
         contentValue.put(DatabaseHelper.DESC, desc);
-        String vetta= new String(String.valueOf(new Random().nextInt(20)));
+        String vetta= new String(String.valueOf(new Random().nextInt(5)));
         contentValue.put(DatabaseHelper.VESI, vetta);
         database.insert(DatabaseHelper.TABLE_NAME, null, contentValue);
     }
