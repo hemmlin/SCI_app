@@ -1,21 +1,23 @@
 <resources>
-    <string name="app_name">SCIprojekti</string>
+    <string name="app_name">Kauppakamu</string>
     <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tuote_prompt">Tuotteen nimi</string>
-    <string-array name="tuote_array">
-        <item>Maito</item>
-        <item>Omena</item>
-        <item>Leipä</item>
-        <item>Soijarouhe</item>
-        <item>kokis</item>
-        <item>avocado</item>
-        <item>jauhelliha</item>
-        <item>test</item>
-    </string-array>
 
+    <!--Mainin napit-->
+    <string name="qr_koodi_siirry">QR-koodin luku</string>
+    <string name="kauppalista_siirry">Kauppalista</string>
+    <string name="profiili_siirry">Profiili</string>
+    <string name="jaa_kauppalista_siirry">Jaa kauppalista</string>
+
+    <!--Jaa kauppalista-->
+    <string name="jaa">Jaa</string>
+    <string name="syota_sposti">Sähköpostiosoite</string>
+    <string name="syota_valinnainen_viesti">Vapaavalintainen viesti</string>
+    <string name="jaa_kauppalista">Jaa kauppalista</string>
+    <string name="kauppalista_lahetetty">Kauppalista jaettu onnistuneesti!</string>
 
     <!-- Oma profiili -->
     <string name="teemu">Teemu Teekkari</string>
@@ -29,10 +31,9 @@
     <string name="seek_vesijalanjalki">Ostoslistan vesijalanjälki:</string>
     <string name="ei_maaritelty">Ei vielä määritelty</string>
     <string name="tyhja_ostoslista">Ostoslistasi on tyhjä</string>
-
     <string name="profiili_desc">Profiilitietosi auttavat meitä suosittelemaan juuri sinulle sopivia tuotteita.</string>
-
     <string name="edit_button">Muokkaa</string>
+
     <!-- Muokkaa profiilia -->
     <string name="muokkaa_profiilia">Muokkaa profiilia</string>
     <string name="syota_nimi">Nimi</string>
@@ -71,7 +72,5 @@
         <item>Lakto-ovo-vegetaristi</item>
         <item>Vegaani</item>
     </string-array>
-
-    <string name="vesi_Maito">3</string>
 
 </resources>

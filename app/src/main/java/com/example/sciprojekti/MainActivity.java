@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Button qrbtn = (Button)findViewById(R.id.viivakoodi_siirry);
         Button listabtn = (Button)findViewById(R.id.kauppalista_siirry);
         Button profiilibtn = (Button)findViewById(R.id.omaprofiili_siirry);
+        Button jaakauppalistabtn = (Button) findViewById(R.id.jaa_kauppalista);
 
         qrbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +50,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
+        jaakauppalistabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, JaaKauppalistaActivity.class));
+            }
+        });
 
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

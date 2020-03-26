@@ -1,6 +1,7 @@
 package com.example.sciprojekti;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
 import android.content.Intent;
@@ -121,7 +122,7 @@ public class ProfiiliActivity extends AppCompatActivity {
             imageUri = data.getData();
             /**if (imageUri != null) {
                 selectedImagePath = imageUri.getPath();
-                electedImagePath = getRealPathFromURI(imageUri);
+                selectedImagePath = getRealPathFromURI(imageUri);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString(sProfiilikuva, selectedImagePath);
                 editor.apply();
