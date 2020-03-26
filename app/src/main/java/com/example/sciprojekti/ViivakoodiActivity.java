@@ -84,7 +84,7 @@ public class ViivakoodiActivity extends AppCompatActivity implements View.OnClic
 
                     if(result.getContents().matches("6430043010850")) {
                         // Open URL
-                        Intent browserIntent = new Intent(ViivakoodiActivity.this, CountryListActivity.class);
+                        Intent browserIntent = new Intent(ViivakoodiActivity.this, viivakoodiTulokset.class);
                         startActivity(browserIntent);
                         onBackPressed();
                     }

@@ -12,18 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Profiilinluonti"
-            android:parentActivityName=".ProfiiliActivity"
-                  ></activity>
-        <activity android:name=".ProfiiliActivity"
-            android:parentActivityName=".MainActivity"
-                  />
-
+        <activity
+            android:name=".Profiilinluonti"
+            android:parentActivityName=".ProfiiliActivity" />
+        <activity
+            android:name=".ProfiiliActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".KauppalistaActivity" />
         <activity android:name=".ViivakoodiActivity" />
         <activity
             android:name=".CountryListActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -42,6 +41,7 @@
             android:name=".AddCountryActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity android:name=".viivakoodiTulokset"></activity>
     </application>
 
 </manifest>
