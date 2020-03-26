@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Profiilinluonti"
             android:parentActivityName=".ProfiiliActivity"
                   />
@@ -25,10 +26,11 @@
         <activity android:name=".KauppalistaLahetetty"
             android:parentActivityName=".MainActivity" />
 
+        <activity android:name=".KauppalistaActivity" />
+
         <activity android:name=".ViivakoodiActivity" />
 
-        <activity
-            android:name=".CountryListActivity"/>
+        <activity android:name=".CountryListActivity"/>
 
         <activity
             android:name=".MainActivity"
@@ -45,6 +47,7 @@
         <activity
             android:name=".AddCountryActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity android:name=".viivakoodiTulokset"></activity>
     </application>
 
 </manifest>

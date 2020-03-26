@@ -1,6 +1,7 @@
 package com.example.sciprojekti;
 
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -9,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Patterns;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,7 +46,7 @@ public class ViivakoodiActivity extends AppCompatActivity implements View.OnClic
 
         //View objects
         buttonScan = (Button) findViewById(R.id.buttonScan);
-        //textViewName = (TextView) findViewById(R.id.textViewName);
+        textViewName = (TextView) findViewById(R.id.textViewName);
         //textViewAddress = (TextView) findViewById(R.id.textViewAddress);
 
         //intializing scan object
@@ -70,13 +72,27 @@ public class ViivakoodiActivity extends AppCompatActivity implements View.OnClic
                     //setting values to textviews
                     textViewName.setText(obj.getString("name"));
                     textViewAddress.setText(obj.getString("address"));
+
+
+                    //startActivity(new Intent(ViivakoodiActivity.this, KauppalistaActivity.class));
                 } catch (JSONException e) {
                     e.printStackTrace();
                     //if control comes here
                     //that means the encoded format not matches
                     //in this case you can display whatever data is available on the qrcode
                     //to a toast
+
+                    if(result.getContents().matches("6430043010850")) {
+                        // Open URL
+                        Intent browserIntent = new Intent(ViivakoodiActivity.this, viivakoodiTulokset.class);
+                        startActivity(browserIntent);
+                        onBackPressed();
+                    }
+
                     Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+                    //startActivity(new Intent(ViivakoodiActivity.this, KauppalistaActivity.class));
+
+
                 }
             }
         } else {
