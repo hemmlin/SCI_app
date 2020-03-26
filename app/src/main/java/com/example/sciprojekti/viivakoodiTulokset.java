@@ -50,9 +50,9 @@ public class viivakoodiTulokset extends Activity implements OnClickListener {
         Intent intent = getIntent();
 
         if(intent.toString().matches("6430043010850")) {
-            _id = Long.parseLong("hernekeittojalostaja");}
+            _id = Long.parseLong("hernekeittoreilustilihaajalostaja");}
 
-        String name = "Hernekeitto jalostaja";
+        String name = "Hernekeitto reilusti lihaa, Jalostaja";
         String desc = "1";
         //String vesi = intent.getStringExtra("vetta");
         //String test = name.toLowerCase().trim().replace(",","").replace("ä","a");
