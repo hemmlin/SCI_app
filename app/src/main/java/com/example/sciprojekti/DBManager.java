@@ -35,11 +35,13 @@ public class DBManager {
         contentValue.put(DatabaseHelper.DESC, desc);
         String vetta= new String(String.valueOf(new Random().nextInt(5)));
         contentValue.put(DatabaseHelper.VESI, vetta);
+        String hiili= new String(String.valueOf(new Random().nextInt(5)));
+        contentValue.put(DatabaseHelper.HIILI, hiili);
         database.insert(DatabaseHelper.TABLE_NAME, null, contentValue);
     }
 
     public Cursor fetch() {
-        String[] columns = new String[]{DatabaseHelper._ID, DatabaseHelper.SUBJECT, DatabaseHelper.DESC, DatabaseHelper.VESI};
+        String[] columns = new String[]{DatabaseHelper._ID, DatabaseHelper.SUBJECT, DatabaseHelper.DESC, DatabaseHelper.VESI, DatabaseHelper.HIILI};
         Cursor cursor = database.query(DatabaseHelper.TABLE_NAME, columns, null, null, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();

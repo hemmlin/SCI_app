@@ -21,7 +21,6 @@
         android:maxLines="3"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/vesi_pisara"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/id"
@@ -49,7 +48,15 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginRight="6dp"
-        android:layout_toRightOf="@+id/hiilijalki"
+        android:layout_toRightOf="@+id/hiililataa"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/hiililataa"
+        android:layout_centerVertical="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="6dp"
+        android:layout_toRightOf="@+id/desc"
         />
 <!--
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -77,7 +84,8 @@
             android:textStyle="bold"
             android:text="3l"
      />
-    </RelativeLayout> -->
+    </RelativeLayout>
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/hiilijalki"
         android:background="@drawable/jalka2"
@@ -105,5 +113,6 @@
 
             />
     </RelativeLayout>
+    -->
 
 </RelativeLayout>

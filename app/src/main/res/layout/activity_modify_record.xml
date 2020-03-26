@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="650dp"
     android:orientation="vertical"
     android:weightSum="2"
+    android:background="@drawable/roundedbutton"
     android:padding="10dp" >
 
     <ImageView
         android:id="@+id/tuotte_kuva"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_gravity="center"
 
 
@@ -18,13 +19,57 @@
         android:id="@+id/tuote_otsikko"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:text="tuote"
         android:textSize="20sp"
         android:textStyle="bold"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
 
-    <EditText
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/vesikuvaus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Tämän tuotteen veden kulutus on xx.xxl. Vedenkulutus on korkea verrattuna muihin saman tuoteryhmän tuotteisiin "
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/hiilikuvaus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Tämän tuotteen hiilijalanjälki on xx.xx kg. Hiilijalanjälki on keskiverto tässä tuoteryhmässä "
+            />
+    </LinearLayout>
+
+    <!--<EditText
         android:id="@+id/subject_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,12 +84,13 @@
         android:ems="10"
         android:hint="muuta määrää"
         android:inputType="textMultiLine"
-        android:minLines="5" >
+        android:minLines="1" >
     </EditText>
+    -->
     
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="250dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         android:weightSum="2"
@@ -55,20 +101,23 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:background="@color/taustavari"
+            android:background="@drawable/lightblueroundedbutton"
             android:layout_marginRight="2dp"
             >
             <TextView
                 android:id="@+id/suositus1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:gravity="center"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:text="testi"
 
             />
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/suosituskuva1"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -77,13 +126,25 @@
                 />
             <TextView
                 android:id="@+id/suosituskuvaus1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
             <Button
                 android:id="@+id/susosituskorvaa1"
+                android:background="@drawable/roundedbutton"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:text="korvaa"
                 />
         </LinearLayout>
@@ -92,20 +153,23 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:background="@color/taustavari"
+            android:background="@drawable/lightblueroundedbutton"
             android:layout_marginLeft="2dp"
             >
             <TextView
                 android:id="@+id/suositus2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:gravity="center"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:text="testi"
 
                 />
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/suosituskuva2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -114,13 +178,25 @@
                 />
             <TextView
                 android:id="@+id/suosituskuvaus2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
             <Button
-                android:id="@+id/susosituskorvaa2"
+                android:id="@+id/suosituskorvaa2"
+                android:background="@drawable/roundedbutton"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:text="korvaa"
                 />
         </LinearLayout>
@@ -132,22 +208,27 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
+        android:layout_marginTop="15dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal" >
 
         <Button
             android:id="@+id/btn_update"
+            android:background="@drawable/lightblueroundedbutton"
             android:layout_width="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="päivitä" />
+            android:text="palaa" />
 
         <Button
             android:id="@+id/btn_delete"
+            android:background="@drawable/lightblueroundedbutton"
             android:layout_width="wrap_content"
+            android:layout_marginBottom="15dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="poista listalta" />
+            android:text="poista tuote" />
     </LinearLayout>
 
 </LinearLayout>

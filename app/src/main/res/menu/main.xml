@@ -6,6 +6,6 @@
         android:id="@+id/add_record"
         android:icon="@android:drawable/ic_menu_add"
         android:orderInCategory="100"
-        android:title="add_record"
+        android:title="lisää tuote"
         app:showAsAction="always"/>
 </menu>

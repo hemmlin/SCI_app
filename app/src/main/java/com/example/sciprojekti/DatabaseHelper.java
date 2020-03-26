@@ -19,6 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String SUBJECT = "subject";
     public static final String DESC = "description";
     public static final String VESI = "vedenkulutus";
+    public static final String HIILI= "hiilenkulutus";
     //public final List<String> VEDET= getAllVedet();
 
     // Database Information
@@ -29,7 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Creating table query
     private static final String CREATE_TABLE = "create table " + TABLE_NAME + "(" + _ID
-            + " INTEGER PRIMARY KEY AUTOINCREMENT, " + SUBJECT + " TEXT NOT NULL, " + DESC + " TEXT, " + VESI + " TEXT);";
+            + " INTEGER PRIMARY KEY AUTOINCREMENT, " + SUBJECT + " TEXT NOT NULL, " + DESC + " TEXT, " + VESI + " TEXT, " + HIILI + " TEXT);";
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);

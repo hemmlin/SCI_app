@@ -47,23 +47,24 @@ public class AddCountryActivity extends Activity implements OnClickListener {
         SearchableSpinner searchablespinner = (SearchableSpinner) findViewById(R.id.searchablespinner);
 
 
-        searchablespinner_list.add("Hernekeitto, Jalostaja");
+        searchablespinner_list.add("Hernekeitto , Jalostaja");
         searchablespinner_list.add("Hernekeitto perinteinen, Jalostaja");
         searchablespinner_list.add("Hernekeitto Reilusti lihaa, Jalostaja");
         searchablespinner_list.add("Tonnikalapalat vedessä MCS, Pirkka");
         searchablespinner_list.add("Tonnikalapalat vedessä, Pirkka");
         searchablespinner_list.add("Lihapullat kastikkeessa, Jalostaja");
         searchablespinner_list.add("Kikherneet suolaliemessä luomu, Pirkka");
-        searchablespinner_list.add("Mustapavut, Gogreen");
+        searchablespinner_list.add("Mustapavut , Gogreen");
         searchablespinner_list.add("Tomaattimurska valkosipulilla, Pirkka");
-        searchablespinner_list.add("Makaroni, Myllyn paras");
-        searchablespinner_list.add("Ohrahelmi, Torino");
+        searchablespinner_list.add("Makaroni , Myllyn paras");
+        searchablespinner_list.add("Ohrahelmi , Torino");
         searchablespinner_list.add("Peruna suomalainen kiinteä, Pirkka");
-        searchablespinner_list.add("Prsakaali pakaste, Pirkka");
+        searchablespinner_list.add("Parsakaali pakaste, Pirkka");
         searchablespinner_list.add("Vihreät pavut pakaste, Apetit");
-        searchablespinner_list.add("Vihannessekoitus, Apetit");
+        searchablespinner_list.add("Vihannessekoitus , Apetit");
         searchablespinner_list.add("Wok classic, Findus");
         searchablespinner_list.add("Nauta Jauheliha, Atria");
+        searchablespinner_list.add("Härkäpapu suikale, Beanit");
         searchablespinner_list.add("Kanan filesuikaleet hunaja, Atria");
 
         searchablespinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, searchablespinner_list));

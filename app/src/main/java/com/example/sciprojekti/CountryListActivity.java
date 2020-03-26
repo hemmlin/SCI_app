@@ -35,6 +35,8 @@ public class CountryListActivity extends AppCompatActivity {
     private ListView listView;
 
     private RelativeLayout totalBar;
+    private int imageToBeShown=R.drawable.vesi1;
+    private int imageToBeShown2=R.drawable.fp1;
 
 
 
@@ -43,9 +45,9 @@ public class CountryListActivity extends AppCompatActivity {
     //private ArrayList<DatabaseGet> userModelArrayList;
 
     final String[] from = new String[] { DatabaseHelper._ID,
-            DatabaseHelper.SUBJECT, DatabaseHelper.DESC, DatabaseHelper.VESI };
+            DatabaseHelper.SUBJECT, DatabaseHelper.DESC, DatabaseHelper.VESI, DatabaseHelper.HIILI };
 
-    final int[] to = new int[] { R.id.id, R.id.title, R.id.desc, R.id.vesilataa };
+    final int[] to = new int[] { R.id.id, R.id.title, R.id.desc, R.id.vesilataa, R.id.hiililataa };
 
 
 
@@ -57,7 +59,7 @@ public class CountryListActivity extends AppCompatActivity {
 
         dbManager = new DBManager(this);
         dbManager.open();
-        Cursor cursor = dbManager.fetch();
+        final Cursor cursor = dbManager.fetch();
 
 
         listView = (ListView) findViewById(R.id.list_view);
@@ -66,6 +68,7 @@ public class CountryListActivity extends AppCompatActivity {
 
         adapter = new SimpleCursorAdapter(this, R.layout.activity_view_record, cursor, from, to, 0);
         final int[] imgs = new int[] { R.drawable.vesi1,R.drawable.vesi2,R.drawable.vesi3,R.drawable.vesi4,R.drawable.vesi5 };
+        final int[] imgs2 = new int[] { R.drawable.fp1,R.drawable.fp2,R.drawable.fp3,R.drawable.fp4,R.drawable.fp5 };
 
         adapter.setViewBinder(new SimpleCursorAdapter.ViewBinder() {
             @Override
@@ -74,27 +77,52 @@ public class CountryListActivity extends AppCompatActivity {
                 switch (view.getId()) {
                     case R.id.vesilataa:
                         String imageType = cursor.getString(3);//getInt(columnIndex);//columnIndex
-                        int imageToBeShown=imgs[0];
-                        switch (imageType) {
+                        //int imageToBeShown=imgs[0];
+                    switch (imageType) {
+                        case "0":
+                            imageToBeShown=imgs[0];
+                            break;
+                        case "1":
+                            imageToBeShown=imgs[1];
+                            break;
+                        case "2":
+                            imageToBeShown=imgs[2];
+                            break;
+                        case "3":
+                            imageToBeShown=imgs[3];
+                            break;
+                        case "4":
+                            imageToBeShown=imgs[4];
+                            break;
+                        default:
+                            break;
+                        }
+                        ((ImageView)view).setImageResource(imageToBeShown);
+                        return true;
+
+                    case R.id.hiililataa:
+                        String imageType2 = cursor.getString(4);//getInt(columnIndex);//columnIndex
+                        switch (imageType2) {
                             case "0":
-                                imageToBeShown=imgs[0];
+                                imageToBeShown2=imgs2[0];
                                 break;
                             case "1":
-                                imageToBeShown=imgs[1];
+                                imageToBeShown2=imgs2[1];
                                 break;
                             case "2":
-                                imageToBeShown=imgs[2];
+                                imageToBeShown2=imgs2[2];
                                 break;
                             case "3":
-                                imageToBeShown=imgs[3];
+                                imageToBeShown2=imgs2[3];
                                 break;
                             case "4":
-                                imageToBeShown=imgs[4];
+                                imageToBeShown2=imgs2[4];
                                 break;
                             default:
                                 break;
                         }
-                        ((ImageView)view).setImageResource(imageToBeShown);
+                        ((ImageView)view).setImageResource(imageToBeShown2);
+                        final int noh= imageToBeShown2;
                         return true;
                 }
                 return false;
@@ -121,13 +149,15 @@ public class CountryListActivity extends AppCompatActivity {
                 String id = idTextView.getText().toString();
                 String title = titleTextView.getText().toString();
                 String desc = descTextView.getText().toString();
-                //String vetta = vesiTextView.getText().toString();
+                int vetta = imageToBeShown;
+                int hiili = imageToBeShown2;
 
                 Intent modify_intent = new Intent(getApplicationContext(), ModifyCountryActivity.class);
                 modify_intent.putExtra("title", title);
                 modify_intent.putExtra("desc", desc);
                 modify_intent.putExtra("id", id);
-                //modify_intent.putExtra("vetta", vetta);
+                modify_intent.putExtra("vetta", vetta);
+                modify_intent.putExtra("hiili", hiili);
 
                 startActivity(modify_intent);
                 //paivitetaan totalit

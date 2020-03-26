@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class DatabaseGet implements Serializable {
 
-    private String name, kpl, vesi;
+    private String name, kpl, vesi, hiili;
     private int id;
 
     public String getVesi() {
@@ -14,6 +14,14 @@ public class DatabaseGet implements Serializable {
 
     public void setVesi(String city) {
         this.vesi = vesi;
+    }
+
+    public String getHiili() {
+        return hiili;
+    }
+
+    public void setHiili(String city) {
+        this.hiili = hiili;
     }
 
     public int getId() {
