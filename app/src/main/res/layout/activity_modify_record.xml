@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:weightSum="2"
     android:padding="10dp" >
 
     <ImageView
@@ -36,10 +37,95 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="enter_desc"
+        android:hint="muuta määrää"
         android:inputType="textMultiLine"
         android:minLines="5" >
     </EditText>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/taustavari"
+            android:layout_marginRight="2dp"
+            >
+            <TextView
+                android:id="@+id/suositus1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="testi"
+
+            />
+            <ImageView
+                android:id="@+id/suosituskuva1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+
+                />
+            <TextView
+                android:id="@+id/suosituskuvaus1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <Button
+                android:id="@+id/susosituskorvaa1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="korvaa"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/taustavari"
+            android:layout_marginLeft="2dp"
+            >
+            <TextView
+                android:id="@+id/suositus2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="testi"
+
+                />
+            <ImageView
+                android:id="@+id/suosituskuva2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+
+                />
+            <TextView
+                android:id="@+id/suosituskuvaus2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <Button
+                android:id="@+id/susosituskorvaa2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="korvaa"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
 
 
     <LinearLayout
