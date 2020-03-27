@@ -43,7 +43,8 @@
 
         <activity
             android:name=".ModifyCountryActivity"
-            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+            android:theme="@style/Theme.Transparent" />
+
         <activity
             android:name=".AddCountryActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
