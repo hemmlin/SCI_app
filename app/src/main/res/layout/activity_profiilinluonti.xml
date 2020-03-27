@@ -9,173 +9,194 @@
     android:background="#fff"
     tools:context=".Profiilinluonti">
 
-    <EditText
-        android:id="@+id/syota_nimi"
-        android:layout_width="230dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="@string/syota_nimi"
-        android:inputType="textPersonName"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/muokkaa_profiilia" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="188dp">
 
-    <TextView
-        android:id="@+id/muokkaa_profiilia"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:gravity="center"
-        android:text="@string/muokkaa_profiilia"
-        android:textColor="#003A59"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:weightSum="1">
 
-    <Button
-        android:id="@+id/ok_nappi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/lightblueroundedbutton"
-        android:hint="@string/ok_button"
-        android:text="@android:string/ok"
-        android:textColor="#003A59"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch_vesijalanjalki"
-        app:layout_constraintVertical_bias="0.883" />
+            <EditText
+                android:id="@+id/syota_nimi"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="@string/syota_nimi"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/muokkaa_profiilia" />
 
-    <Spinner
-        android:id="@+id/syota_ikaryhma"
-        android:layout_width="230dp"
-        android:layout_height="31dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:entries="@array/ikaryhma_array"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/syota_nimi" />
+            <TextView
+                android:id="@+id/muokkaa_profiilia"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:gravity="center"
+                android:text="@string/muokkaa_profiilia"
+                android:textColor="#003A59"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/syota_sukupuoli"
-        android:layout_width="230dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:entries="@array/sukupuoli_array"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/syota_ikaryhma" />
+            <Button
+                android:id="@+id/ok_nappi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/lightblueroundedbutton"
+                android:hint="@string/ok_button"
+                android:text="@android:string/ok"
+                android:textColor="#003A59"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch_vesijalanjalki"
+                app:layout_constraintVertical_bias="0.883" />
 
-    <Spinner
-        android:id="@+id/syota_ruokavalio"
-        android:layout_width="230dp"
-        android:layout_height="31dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:entries="@array/ruokavalio_array"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/syota_sukupuoli" />
+            <Spinner
+                android:id="@+id/syota_ikaryhma"
+                android:layout_width="230dp"
+                android:layout_height="31dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:entries="@array/ikaryhma_array"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/syota_nimi" />
 
-    <EditText
-        android:id="@+id/syota_allergiat"
-        android:layout_width="230dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:hint="@string/syota_allergiat"
-        android:textSize="15sp"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/syota_ruokavalio" />
+            <Spinner
+                android:id="@+id/syota_sukupuoli"
+                android:layout_width="230dp"
+                android:layout_height="31dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:entries="@array/sukupuoli_array"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/syota_ikaryhma" />
 
-    <Switch
-        android:id="@+id/switch_kotimaisuus"
-        android:layout_width="230dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="15dp"
-        android:checked="false"
-        android:text="@string/kotimaisuus"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/syota_allergiat"
-        tools:checked="false" />
-    <Switch
-        android:id="@+id/switch_eettisyys"
-        android:layout_width="230dp"
-        android:layout_height="31dp"
-        android:text="@string/eettisyys"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="473dp"
-        android:layout_marginTop="15dp"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/switch_kotimaisuus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <Switch
-        android:id="@+id/switch_edullisuus"
-        android:layout_width="230dp"
-        android:layout_height="31dp"
-        android:text="@string/edullisuus"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="473dp"
-        android:layout_marginTop="15dp"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/switch_eettisyys"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <Switch
-        android:id="@+id/switch_hiilijalanjalki"
-        android:layout_width="230dp"
-        android:layout_height="31dp"
-        android:text="@string/hiilijalanjalki_min"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="473dp"
-        android:layout_marginTop="15dp"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/switch_edullisuus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <Switch
-        android:id="@+id/switch_vesijalanjalki"
-        android:layout_width="230dp"
-        android:layout_height="31dp"
-        android:text="@string/vesijalanjalki_min"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="473dp"
-        android:layout_marginTop="15dp"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/switch_hiilijalanjalki"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"/>
+            <Spinner
+                android:id="@+id/syota_ruokavalio"
+                android:layout_width="230dp"
+                android:layout_height="31dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:entries="@array/ruokavalio_array"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/syota_sukupuoli" />
+
+            <EditText
+                android:id="@+id/syota_allergiat"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:hint="@string/syota_allergiat"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/syota_ruokavalio" />
+
+            <Switch
+                android:id="@+id/switch_kotimaisuus"
+                android:layout_width="230dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="15dp"
+                android:checked="false"
+                android:text="@string/kotimaisuus"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/syota_allergiat"
+                tools:checked="false" />
+
+            <Switch
+                android:id="@+id/switch_eettisyys"
+                android:layout_width="230dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/eettisyys"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch_kotimaisuus"
+                tools:layout_editor_absoluteX="89dp"
+                tools:layout_editor_absoluteY="473dp" />
+
+            <Switch
+                android:id="@+id/switch_edullisuus"
+                android:layout_width="230dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/edullisuus"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch_eettisyys"
+                tools:layout_editor_absoluteX="89dp"
+                tools:layout_editor_absoluteY="473dp" />
+
+            <Switch
+                android:id="@+id/switch_hiilijalanjalki"
+                android:layout_width="230dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/hiilijalanjalki_min"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch_edullisuus"
+                tools:layout_editor_absoluteX="89dp"
+                tools:layout_editor_absoluteY="473dp" />
+
+            <Switch
+                android:id="@+id/switch_vesijalanjalki"
+                android:layout_width="230dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/vesijalanjalki_min"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch_hiilijalanjalki"
+                tools:layout_editor_absoluteX="89dp"
+                tools:layout_editor_absoluteY="473dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
