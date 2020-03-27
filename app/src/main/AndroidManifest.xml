@@ -14,17 +14,16 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".Profiilinluonti"
-            android:parentActivityName=".ProfiiliActivity"
-                  />
+                  android:parentActivityName=".ProfiiliActivity" />
 
         <activity android:name=".ProfiiliActivity"
-            android:parentActivityName=".MainActivity" />
+                  android:parentActivityName=".MainActivity" />
 
         <activity android:name=".JaaKauppalistaActivity"
-            android:parentActivityName=".MainActivity" />
+                  android:parentActivityName=".MainActivity" />
 
         <activity android:name=".KauppalistaLahetetty"
-            android:parentActivityName=".MainActivity" />
+                  android:parentActivityName=".MainActivity" />
 
         <activity android:name=".KauppalistaActivity" />
 
