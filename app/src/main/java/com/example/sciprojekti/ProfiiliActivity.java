@@ -66,12 +66,12 @@ public class ProfiiliActivity extends AppCompatActivity {
             TextView kotimaisuus = findViewById(R.id.prof_arvot);
 
 
-            nimi.setText(sharedPreferences.getString(sNimi, ""));
-            ikaryhma.setText(sharedPreferences.getString(sIkaryhma, ""));
-            sukupuoli.setText(sharedPreferences.getString(sSukupuoli, ""));
-            allergiat.setText(sharedPreferences.getString(sAllergiat, ""));
-            ruokavalio.setText(sharedPreferences.getString(sRuokavalio, ""));
-            kotimaisuus.setText(sharedPreferences.getString(sKotimaisuus, ""));
+            nimi.setText(sharedPreferences.getString(sNimi, "Teemu Teekkari"));
+            ikaryhma.setText(sharedPreferences.getString(sIkaryhma, "Ei vielä määritelty"));
+            sukupuoli.setText(sharedPreferences.getString(sSukupuoli, "Ei vielä määritelty"));
+            allergiat.setText(sharedPreferences.getString(sAllergiat, "Ei vielä määritelty"));
+            ruokavalio.setText(sharedPreferences.getString(sRuokavalio, "Ei vielä määritelty"));
+            kotimaisuus.setText(sharedPreferences.getString(sKotimaisuus, "Ei vielä määritelty"));
 
             /**Toasti*/
             CharSequence text = "Profiilin tiedot tallennettu!";
@@ -159,12 +159,12 @@ public class ProfiiliActivity extends AppCompatActivity {
 
 
         /**Asetetaan haluttu teksti oikeeseen boksiin*/
-        nimi.setText(sharedPreferences.getString(sNimi,""));
-        ikaryhma.setText(sharedPreferences.getString(sIkaryhma,""));
-        sukupuoli.setText(sharedPreferences.getString(sSukupuoli,""));
-        allergiat.setText(sharedPreferences.getString(sAllergiat,""));
-        ruokavalio.setText(sharedPreferences.getString(sRuokavalio,""));
-        kotimaisuus.setText(sharedPreferences.getString(sKotimaisuus, ""));
+        nimi.setText(sharedPreferences.getString(sNimi,"Teemu Teekkari"));
+        ikaryhma.setText(sharedPreferences.getString(sIkaryhma,"Ei vielä määritelty"));
+        sukupuoli.setText(sharedPreferences.getString(sSukupuoli,"Ei vielä määritelty"));
+        allergiat.setText(sharedPreferences.getString(sAllergiat,"Ei vielä määritelty"));
+        ruokavalio.setText(sharedPreferences.getString(sRuokavalio,"Ei vielä määritelty"));
+        kotimaisuus.setText(sharedPreferences.getString(sKotimaisuus, "Ei vielä määritelty"));
 
         /**String uriBackStr = sharedPreferences.getString(sProfiilikuva, "");
         ImageView profView = findViewById(R.id.profile);
