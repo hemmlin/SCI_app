@@ -46,7 +46,7 @@ public class ModifyCountryActivity extends Activity implements OnClickListener {
         
 
         setContentView(R.layout.activity_modify_record);
-        getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)w3
 
         dbManager = new DBManager(this);
         dbManager.open();
