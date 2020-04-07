@@ -112,6 +112,15 @@ public class ModifyCountryActivity extends Activity implements OnClickListener {
                 suostext2="Valitse lihaton vaihtoehto";
 
                 break;
+            case "nauta":
+                suos1kuv=R.drawable.tummasoijarouhesoyappetit;
+                suos2kuv=R.drawable.harkisorginal;
+                suosots1="Tumma soijarouhe, Soyappetit";
+                suosots2="Härkis orginal";
+                suostext1="Valitse lihaton, edullisempi ja ekologisempi vaihtoehto";
+                suostext2="Valitse lihaton vaihtoehto joka maistuu samalta";
+
+                break;
             //default:
                 //break;
         }
