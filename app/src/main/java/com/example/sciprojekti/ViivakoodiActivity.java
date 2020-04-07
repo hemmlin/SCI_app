@@ -82,7 +82,7 @@ public class ViivakoodiActivity extends AppCompatActivity implements View.OnClic
                     //in this case you can display whatever data is available on the qrcode
                     //to a toast
 
-                    if(result.getContents().matches("6430043010850")) {
+                    if(result.getContents().matches("6409531659413")) {
                         // Open URL
                         Intent browserIntent = new Intent(ViivakoodiActivity.this, viivakoodiTulokset.class);
                         startActivity(browserIntent);
