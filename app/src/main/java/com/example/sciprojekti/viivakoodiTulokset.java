@@ -43,7 +43,7 @@ public class viivakoodiTulokset extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setTitle("Modify Record");
+        setTitle("Tuote");
 
         setContentView(R.layout.activity_viivakoodi_tulokset);
 
@@ -88,7 +88,7 @@ public class viivakoodiTulokset extends Activity implements OnClickListener {
         //String test = name.toLowerCase().trim().replace(",","").replace("ä","a");
 
 
-        otsikko.setText(name);
+        otsikko.setText(name1);
         //kuvan asetus
         try {
             Resources res = getResources();
@@ -97,10 +97,10 @@ public class viivakoodiTulokset extends Activity implements OnClickListener {
             Drawable drawable = res.getDrawable(resID);
             kuva.setImageDrawable(drawable);
         }catch(Exception ex) {
-            kuva.setImageResource(R.drawable.empty_view_bg);
+            kuva.setImageResource(R.drawable.hernekeittoperinteinenjalostaja);
         };
-        hiilikuva.setImageResource(hiili);
-        vesikuva.setImageResource(vesi);
+        hiilikuva.setImageResource(R.drawable.fp4);
+        vesikuva.setImageResource(R.drawable.vesi3);
 
 
 
@@ -118,7 +118,7 @@ public class viivakoodiTulokset extends Activity implements OnClickListener {
             case "hernekeitto":
                 suos1kuv=R.drawable.hernekeittoluomujalostaja;
                 suos2kuv=R.drawable.hernekeittoharkisjalostaja;
-                suosots1="Hernekeitto Luomu , Jalostaja";
+                suosots1="Hernekeitto Luomu, Jalostaja";
                 suosots2="Hernekeitto Härkis, Jalostaja";
                 suostext1="Valitse pienempi vesijalanjälki ja luomu tuote";
                 suostext2="Valitse lihaton vaihtoehto";
@@ -147,7 +147,7 @@ public class viivakoodiTulokset extends Activity implements OnClickListener {
     public void onClick(View v) {
         Intent intent = getIntent();
         String title="";
-        CharSequence text = "Tuote korvattu!";
+        CharSequence text = "Tuote lisätty!";
         Toast toast = Toast.makeText(viivakoodiTulokset.this,text, Toast.LENGTH_LONG);
         View toastView = toast.getView();
         TextView toastMessage = (TextView) toastView.findViewById(android.R.id.message);
@@ -160,9 +160,9 @@ public class viivakoodiTulokset extends Activity implements OnClickListener {
                 //dbManager.update(_id, title, desc);
                 dbManager.insert(title, desc);
 
-                Intent siirrymuok = new Intent(this, CountryListActivity.class);
-                startActivity(siirrymuok);
-                onBackPressed();
+                toast.show();
+                this.returnLista();
+                break;
 
             case R.id.suosituskorvaa2:
                 title = suosots2;
@@ -171,13 +171,19 @@ public class viivakoodiTulokset extends Activity implements OnClickListener {
                 //dbManager.update(_id, title, desc);
                 dbManager.insert(title, desc2);
 
-                Intent siirrymuok2 = new Intent(this, CountryListActivity.class);
-                startActivity(siirrymuok2);
-                onBackPressed();
+                toast.show();
+                this.returnLista();
+                break;
+
 
             case R.id.btn_delete:
-                dbManager.delete(_id);
-                this.returnHome();
+                title = "Hernekeitto perinteinen, Jalostaja";
+                String desc3 = "1";
+
+                //dbManager.update(_id, title, desc);
+                dbManager.insert(title, desc3);
+                toast.show();
+                this.returnLista();
                 break;
 
             case R.id.btn_update:
@@ -190,6 +196,11 @@ public class viivakoodiTulokset extends Activity implements OnClickListener {
 
     public void returnHome() {
         Intent home_intent = new Intent(getApplicationContext(), ViivakoodiActivity.class)
+                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(home_intent);
+    }
+    public void returnLista() {
+        Intent home_intent = new Intent(getApplicationContext(), CountryListActivity.class)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(home_intent);
     }

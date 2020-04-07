@@ -74,7 +74,7 @@
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/roundedbutton"
-        android:text="@string/qr_koodi_siirry"
+        android:text="viivakoodin luku"
         android:textColor="@color/tummasin"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/kauppalista_siirry"

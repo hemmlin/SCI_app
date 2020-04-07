@@ -29,7 +29,8 @@
 
         <activity android:name=".ViivakoodiActivity" />
 
-        <activity android:name=".CountryListActivity"/>
+        <activity android:name=".CountryListActivity"
+            android:parentActivityName=".MainActivity"/>
 
         <activity
             android:name=".MainActivity"
