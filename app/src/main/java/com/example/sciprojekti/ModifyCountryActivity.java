@@ -46,7 +46,7 @@ public class ModifyCountryActivity extends Activity implements OnClickListener {
         
 
         setContentView(R.layout.activity_modify_record);
-        getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)w3
+        getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 
         dbManager = new DBManager(this);
         dbManager.open();
@@ -104,11 +104,11 @@ public class ModifyCountryActivity extends Activity implements OnClickListener {
 
         switch (tuote) {
             case "hernekeitto":
-                suos1kuv=R.drawable.hernekeittojalostaja;
-                suos2kuv=R.drawable.hernekeittoperinteinenjalostaja;
-                suosots1="Hernekeitto , Jalostaja";
-                suosots2="Hernekeitto perinteinen, Jalostaja";
-                suostext1="Valitse pienempi vesijalanjälki";
+                suos1kuv=R.drawable.hernekeittoluomujalostaja;
+                suos2kuv=R.drawable.hernekeittoharkisjalostaja;
+                suosots1="Hernekeitto Luomu , Jalostaja";
+                suosots2="Hernekeitto Härkis, Jalostaja";
+                suostext1="Valitse pienempi vesijalanjälki ja luomu tuote";
                 suostext2="Valitse lihaton vaihtoehto";
 
                 break;

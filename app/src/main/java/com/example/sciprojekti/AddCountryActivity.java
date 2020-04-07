@@ -50,6 +50,8 @@ public class AddCountryActivity extends Activity implements OnClickListener {
         searchablespinner_list.add("Hernekeitto , Jalostaja");
         searchablespinner_list.add("Hernekeitto perinteinen, Jalostaja");
         searchablespinner_list.add("Hernekeitto Reilusti lihaa, Jalostaja");
+        searchablespinner_list.add("Hernekeitto Luomu, Jalostaja");
+        searchablespinner_list.add("Hernekeitto Härkis, Jalostaja");
         searchablespinner_list.add("Tonnikalapalat vedessä MCS, Pirkka");
         searchablespinner_list.add("Tonnikalapalat vedessä, Pirkka");
         searchablespinner_list.add("Lihapullat kastikkeessa, Jalostaja");
@@ -66,6 +68,8 @@ public class AddCountryActivity extends Activity implements OnClickListener {
         searchablespinner_list.add("Nauta Jauheliha, Atria");
         searchablespinner_list.add("Härkäpapu suikale, Beanit");
         searchablespinner_list.add("Kanan filesuikaleet hunaja, Atria");
+        searchablespinner_list.add("Tumma soijarouhe, Soyappetit");
+        searchablespinner_list.add("Härkis orginal");
 
         searchablespinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, searchablespinner_list));
         addTodoBtn = (Button) findViewById(R.id.add_record);
